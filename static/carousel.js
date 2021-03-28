@@ -55,7 +55,7 @@ const set = (e) => {
 }
 
 const predict = () => {
-    fetch("http://localhost:5000/predict", {
+    fetch("https://phishing-detector-app.herokuapp.com/predict", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
