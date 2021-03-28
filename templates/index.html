@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TeamBots | Pishing Detection</title>
+	<link rel="stylesheet" href= "{{ url_for('static',filename='styles/main.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>TEAMBOTS</h2>
+        <ul>
+            <li onclick="showSearch()"><a href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="#"><i class="fas fa-project-diagram"></i>Project</a></li>
+            <li onclick="slideCarousel()"><a href="#"><i class="fas fa-users"></i>Team</a></li>
+        </ul> 
+        <div class="social_media">
+          <a target="_blank" href="https://www.srmist.edu.in/"><i class="fas fa-university"></i></a>
+        </div>
+    </div>
+    <div class="main_content">
+        <div id="home" class="header"><h4><i class="fas fa-shield-alt"></i> SAFE SURFING</h4></div>  
+        <div class="info">
+          <div class="search_box">
+            <div class="left_section">
+              <div class="left_section-upper"></div>
+              <div class="left_section-lower">
+                <form class="control_form">
+                  <input placeholder="Enter the url"type="text" class="url_input" name="url">
+                  <button type="button" class="submit_btn" onclick="predict()"><i class="fas fa-search"></i></button>
+                </form>
+                <div class="result_container">
+                  <i class="fas fa-check-circle fa-3x legit"></i>
+                  <i class="fas fa-times-circle fa-3x phishing"></i>
+                </div>
+              </div>
+            </div>
+            <div class="right_section"></div>
+          </div>
+        </div>
+        <div class="carousel" id="team">
+          <div class="details_carousel">
+            <div class="lead">
+              <div class="role">MACHINE LEARNING ENGINEER</div>
+              <div class="lead_avatar"></div>
+              <div class="vl"></div>
+              <div class="lead_details">
+                <p class="position">Position : Team Lead</p>
+                <p class="name">Name: Jayaprakash R</p>
+                <p class="reg">Reg. No.: RA1711008010013</p>
+                <p class="email">Email: jr6533@srmist.edu.in</p>
+              </div>
+            </div>
+            <div class="dev" >
+              <div class="role">SOFTWARE DEVELOPMENT ENGINEER</div>
+              <div class="dev_avatar"></div>
+              <div class="vl"></div>
+              <div class="dev_details">
+                <p class="position">Position : Team Member</p>
+                <p class="name">Name: Ayush Mishra</p>
+                <p class="reg">Reg. No.: RA1711008010003</p>
+                <p class="email">Email: aa4710@srmist.edu.in</p>
+              </div>
+            </div>
+            <div class="doc" >
+              <div class="role">PROJECT DOCUMENTATION</div>
+              <div class="doc_avatar"></div>
+              <div class="vl"></div>
+              <div class="doc_details">
+                <p class="position">Position : Team Member</p>
+                <p class="name">Name: Meenakshi N</p>
+                <p class="reg">Reg. No.: RA1711008010023</p>
+                <p class="email">Email: mn2796@srmist.edu.in</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider_carousel">
+            <span class="dot" id="dot_1" onclick="set(this)"></span>
+            <span class="dot" id="dot_2" onclick="set(this)"></span>
+            <span class="dot" id="dot_3" onclick="set(this)"></span>
+          </div>
+        </div>
+      </div>
+      <script src="{{ url_for('static',filename='carousel.js') }}"> </script>
+</div>
+
+</body>
+</html>
