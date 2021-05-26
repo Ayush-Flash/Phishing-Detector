@@ -6,6 +6,7 @@ feature_scaler = pickle.load(open('feature_scaler', 'rb'))
 print("***********I am loading initially only**********")
 
 app = Flask(__name__)
+CORS(app)
 
 common_tlds = ["com", "org", "net", "int", "edu", "gov", "mil"]
 common_ctlds = ['.ac', '.ad', '.ae', '.af', '.ag', '.ai', '.al', '.am', '.ao',
